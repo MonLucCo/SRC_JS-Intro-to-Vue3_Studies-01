@@ -19,3 +19,7 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
    - Codage `index.html` :
     - script __JS__ d'instance de `mountedApp` avec un rendu dans `#app`
     - consommation de la donnée `product` dans `h1` de `#app`
+3. *Chalenge :*
+    - Création d'une donnée `description` et affichage dans un paragraphe `p`
+    - Création d'une branche __`L2-challenge`__
+    - Codage `main.js` et `index.html`
