@@ -56,3 +56,9 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
     - Le challenge est d'afficher 'On sale!' lorsque la donnée `onSale` est `vrai`
     - Création d'une branche `L4-rendu-conditionnel-challenge`
     - Création du codage du challenge dans `main.js` et dans `index.html`
+
+### Etape 4 : Rendu conditionnel (branche `L5-liste-de-rendu`)  __List rendering__
+1. Initialisation des données pour cette étape
+   - Création d'une branche `L5-liste-de-rendu`
+   - Suppression du codage du challenge et adaptation des données dans `index.html` et `main.js`
+     - Création d'un tableau `details` et d'une donnée booléenne `inStock`, suppresson de `inventory`
