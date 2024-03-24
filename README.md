@@ -70,3 +70,7 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
    - Création de la donnée structurée `variants` composé des champs `id` et `color` 
    - Affichage de la donnée structurée `variants` pour chaque élément `variant`, avec l'attribut de la *clé* `:key` 
      obtenu par`variant.id`. La donnée affichée `variant.color` est la couleur de l'élément donnée par la clé
+4. *Challenge :* (branche `L5-liste-de-rendu-challenge`)
+    - Le challenge est d'afficher un tableau de donnée `sizes` dans une liste
+    - Création d'une branche `L5-liste-de-rendu-challenge`
+    - Création du codage du challenge dans `main.js` et dans `index.html`
