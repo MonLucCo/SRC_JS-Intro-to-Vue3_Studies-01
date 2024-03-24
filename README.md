@@ -32,4 +32,9 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
         `product-image` et `.product-info`
    - Codage `main.js` :
      - suppression champ `description`
-     
+2. Ajout d'une __image__ aux données
+   - Codage `main.js` :
+     - création du champ `image`
+   - Codage `index.html` :
+     - création de l'élément `img`dans `product-image` en utilisant la directive `v-bind:` pour connecter 
+       la source `src`de l'image
