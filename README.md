@@ -62,3 +62,8 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
    - Création d'une branche `L5-liste-de-rendu`
    - Suppression du codage du challenge et adaptation des données dans `index.html` et `main.js`
      - Création d'un tableau `details` et d'une donnée booléenne `inStock`, suppresson de `inventory`
+2. Rendre (afficher) les éléments d'un tableau `details`
+   - Création du tableau `details` dans `main.js`
+   - Création d'un élément `<ul>` et `<li>` pour afficher une liste dans le DOM
+     - Utiliser la directive `v-for` dans l'élément de liste `<li>` pour parcourir `details` pour chaque élément `detail`
+  
