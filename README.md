@@ -48,3 +48,11 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
 1. Initialisation des données pour cette étape
    - Création d'une branche `L4-rendu-conditionnel`
    - Suppression du codage du challenge dans `index.html` et `main.js`
+2. Rendre (afficher) ou Ne pas rendre (masquer) un élément du DOM (de la page)
+   - Création d'une données `inventory` dans `main.js`
+   - Création d'éléments `<p>` avec une directive enchaînée `v-if`, `v-else-if` et `v-else` sur une condition
+     - voir les autres conditions __`Vue`__ du type `v-if`+`v-else` et `v-show`
+3. *Challenge :* (branche `L4-rendu-conditionnel-challenge`)
+    - Le challenge est d'afficher 'On sale!' lorsque la donnée `onSale` est `vrai`
+    - Création d'une branche `L4-rendu-conditionnel-challenge`
+    - Création du codage du challenge dans `main.js` et dans `index.html`

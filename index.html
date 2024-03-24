@@ -20,6 +20,12 @@
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <p v-if="inventory > 10">In stock</p>                               <!-- Condition d'affichage de l'élément <p> si 'inventory > 10' est vrai -->
+            <p v-else-if="inventory <= 10 && inventory > 0">Amost sold out!</p>  <!-- Condition enchaînée de <p> si 'inventory <= 10 && inventory > 0' est vrai -->
+            <p v-else>Out of stock</p>                                          <!-- Condition d'affichage de l'élément <p> si conditions précédente fausses -->
+            <!-- Challenge -->
+            <p v-if="onSale">On sale!</p>
+            <!-- Challenge -->
           </div>
         </div>
       </div>
