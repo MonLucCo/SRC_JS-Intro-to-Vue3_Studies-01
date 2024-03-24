@@ -12,4 +12,9 @@ const app = Vue.createApp({
            ],
         }
     },
+    methods: {
+        addToCart () {
+            this.cart += 1
+        }
+    }
 })
