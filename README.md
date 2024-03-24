@@ -66,4 +66,7 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
    - Création du tableau `details` dans `main.js`
    - Création d'un élément `<ul>` et `<li>` pour afficher une liste dans le DOM
      - Utiliser la directive `v-for` dans l'élément de liste `<li>` pour parcourir `details` pour chaque élément `detail`
-  
+3. Rendre (afficher) les éléments d'une donnée structurée `variants`
+   - Création de la donnée structurée `variants` composé des champs `id` et `color` 
+   - Affichage de la donnée structurée `variants` pour chaque élément `variant`, avec l'attribut de la *clé* `:key` 
+     obtenu par`variant.id`. La donnée affichée `variant.color` est la couleur de l'élément donnée par la clé
