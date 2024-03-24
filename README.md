@@ -24,7 +24,7 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
     - Création d'une branche __`L2-creation-app-vue_challenge`__
     - Codage `main.js` et `index.html`
 
-### Etape 2 : Fixation d'attribut (branche `L3-fixation-attribut`)
+### Etape 2 : Fixation d'attribut (branche `L3-fixation-attribut`) - __attribute binding__
 1. Initialisation des données pour cette étape
    - Création d'une branche `L3-fixation-attribut`
    - Codage `index.html` :
@@ -43,3 +43,8 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
       l'attribut `href` d'un élément de lien `<a>` 
     - Création d'une branche `L3-fixation-attribut-challenge`
     - Création du codage du challenge dans `main.js` et dans `index.html`
+
+### Etape 3 : Rendu conditionnel (branche `L4-rendu-conditionnel`)  __Conditional rendering__
+1. Initialisation des données pour cette étape
+   - Création d'une branche `L4-rendu-conditionnel`
+   - Suppression du codage du challenge dans `index.html` et `main.js`
