@@ -74,3 +74,12 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
     - Le challenge est d'afficher un tableau de donnée `sizes` dans une liste
     - Création d'une branche `L5-liste-de-rendu-challenge`
     - Création du codage du challenge dans `main.js` et dans `index.html`
+
+### Etape 5 : Gestion des événements (branche `L6-gestion-événements`)  __Event Handling__
+1. Initialisation des données pour cette étape
+   - Création d'une branche `L6-gestion-événements`
+   - Suppression du codage du challenge et adaptation des données dans `index.html` et `main.js`
+     - Création de la donnée `cart` (pour le nombre d'élément ajouté au __panier__) et de la structure `variants` 
+       comprenant `id`, `color` et `image`
+     - Création d'un élément `.cart` (pour compter la quantité du __panier__) et d'un bouton `.button` (pour ajouter 
+       au __panier__)

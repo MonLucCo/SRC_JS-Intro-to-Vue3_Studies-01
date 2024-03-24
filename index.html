@@ -12,11 +12,12 @@
     <div id="app">
       <div class="nav-bar"></div>
 
+      <div class="cart">Cart({{ cart}})</div>   <!-- Quantité au panier -->
+
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
-            <!-- Image goes here -->
-            <img :src="image" alt="">   <!-- solution développée de la fixation d'attribut : <img v-bind:src="image" alt=""> --> 
+            <img v-bind:src="image">   <!-- solution contractée de la fixation d'attribut : <img :src="image"> --> 
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
@@ -26,11 +27,7 @@
               <li v-for="detail in details">{{ detail }}</li>
             </ul>
             <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
-            <!-- Challenge -->
-            <ul>
-              <li v-for="(size, index) in sizes" :key="index">{{ size }}</li>
-            </ul>
-            <!-- Challenge -->
+            <button class="button">Add to Cart</button>
           </div>
         </div>
       </div>
