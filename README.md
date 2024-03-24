@@ -20,7 +20,7 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
     - script __JS__ d'instance de `mountedApp` avec un rendu dans `#app`
     - consommation de la donnée `product` dans `h1` de `#app`
 3. *Chalenge :* (branche `L2-creation-app-vue_challenge`)
-    - Création d'une donnée `description` et affichage dans un paragraphe `p`
+    - Le challenge est de créer une donnée `description` et de l'afficher dans un paragraphe `p`
     - Création d'une branche __`L2-creation-app-vue_challenge`__
     - Codage `main.js` et `index.html`
 
@@ -38,3 +38,8 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
    - Codage `index.html` :
      - création de l'élément `img`dans `product-image` en utilisant la directive `v-bind:` pour connecter 
        la source `src`de l'image
+3. *Challenge :* (branche `L3-fixation-attribut-challenge`)
+    - Le challenge est de créer une donnée `url` et d'utiliser une directive `v-bind` pour fixer l'url à 
+      l'attribut `href` d'un élément de lien `<a>` 
+    - Création d'une branche `L3-fixation-attribut-challenge`
+    - Création du codage du challenge dans `main.js` et dans `index.html`
