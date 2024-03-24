@@ -9,6 +9,13 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
 
 ### Etape 1 : Initialisation du projet - Création de l'application Vue
 1. Initialisation de la structure du projet avec les données du repository de Adam Jahr
-   - [Code-Pop/Intro-to-Vue-3 (GitHub)](https://github.com/Code-Pop/Intro-to-Vue-3)
+   - Source : [Code-Pop/Intro-to-Vue-3 (GitHub)](https://github.com/Code-Pop/Intro-to-Vue-3)
    - Création d'une branche `L2`dans le _Projet_
    - Recopie des fichiers de la _source_
+2. Création de l'instance `mountedApp` de __Vue__ liée à l'élément `#app` du __DOM__
+   - Codage `main.js` :
+     - instance `app` par utilisation de la méthode `Vue.createApp()`
+     - création de la fonction `data()` pour accéder aux données `product`
+   - Codage `index.html` :
+    - script __JS__ d'instance de `mountedApp` avec un rendu dans `#app`
+    - consommation de la donnée `product` dans `h1` de `#app`
