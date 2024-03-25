@@ -113,3 +113,7 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
      - désactiver le bouton `.button` : avec __:disabled="!inStock"__ (code avec le raccourci de `v-bind`)
      - changer le style en modifiant la classe du bouton avec `v-bind:class="{ disabledButton: !inStock }"`
        - alternative à étudier... avec la déclaration `<button :class="[!inStock ? button : disabledButton]">`
+4. *Challenge :* (branche `L7-reliure-style-classe-challenge`)
+    - Le challenge est de lier la classe `.out-of-stock-img` à l'image chaque fois que `inStock` est __faux__
+    - Création d'une branche `L7-reliure-style-classe-challenge`
+    - Création du codage du challenge dans `index.html`
