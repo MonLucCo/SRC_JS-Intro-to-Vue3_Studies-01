@@ -96,3 +96,9 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
       - le bouton s'affiche si le nombre `cart` est supérieur à __0__ avec la directive `v-if="cart > 0"`
       - le bouton gère un événement `@click` qui active la méthode `removeFromCart()` avec la directive `v-on:click="removeFromCart()"` 
         (en version raccourcie : `@click="removeFromCart()"`)
+
+### Etape 6 : Reliure de style et de classe (branche `L7-reliure-style-classe`)  __Class & Style Binding__
+1. Initialisation des données pour cette étape
+   - Création d'une branche `L7-reliure-style-classe`
+   - Suppression du codage du challenge et adaptation des données dans `index.html` et `main.js`
+     - Création de la donnée `brand` (pour la marque) 
