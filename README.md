@@ -108,3 +108,8 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
      - 2 possibilités de codage avec le même résultat :
        - en codage ***camelCase*** : `:style="{ backgroundColor: variant.color }"`
        - en codage ***kebab-case*** : `:style="{ 'background-color': variant.color }"`
+3. Empêcher l'utilisation du bouton quand le stock est vide (`inStock` est *faux*)
+   - désactiver le bouton `.button` et changer son style (utilisation de la classe `.disabledButton`)
+     - désactiver le bouton `.button` : avec __:disabled="!inStock"__ (code avec le raccourci de `v-bind`)
+     - changer le style en modifiant la classe du bouton avec `v-bind:class="{ disabledButton: !inStock }"`
+       - alternative à étudier... avec la déclaration `<button :class="[!inStock ? button : disabledButton]">`
