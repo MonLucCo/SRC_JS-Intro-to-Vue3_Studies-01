@@ -29,14 +29,14 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
    - Création d'une branche `L3-fixation-attribut`
    - Codage `index.html` :
      - création des différentes classes `.nav-bar`, `.product-display`, `.product-container`, 
-        `product-image` et `.product-info`
+        `.product-image` et `.product-info`
    - Codage `main.js` :
      - suppression champ `description`
 2. Ajout d'une __image__ aux données
    - Codage `main.js` :
      - création du champ `image`
    - Codage `index.html` :
-     - création de l'élément `img`dans `product-image` en utilisant la directive `v-bind:` pour connecter 
+     - création de l'élément `img`dans `.product-image` en utilisant la directive `v-bind:` pour connecter 
        la source `src`de l'image
 3. *Challenge :* (branche `L3-fixation-attribut-challenge`)
     - Le challenge est de créer une donnée `url` et d'utiliser une directive `v-bind` pour fixer l'url à 
@@ -106,10 +106,35 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
    - ajout de la classe `color-circle` à la `<div>` des couleurs disponibles
    - remplacement du text de la couleur par un fond dans la couleur désirée avec `:style="{ backgroundColor: variant.color }"`
      - 2 possibilités de codage avec le même résultat :
-       - en codage ***camelCase*** : `:style="{ backgroundColor: variant.color }"`
-       - en codage ***kebab-case*** : `:style="{ 'background-color': variant.color }"`
+       - en codage **camelCase** : `:style="{ backgroundColor: variant.color }"`
+       - en codage **kebab-case** : `:style="{ 'background-color': variant.color }"`
 3. Empêcher l'utilisation du bouton quand le stock est vide (`inStock` est *faux*)
    - désactiver le bouton `.button` et changer son style (utilisation de la classe `.disabledButton`)
      - désactiver le bouton `.button` : avec __:disabled="!inStock"__ (code avec le raccourci de `v-bind`)
      - changer le style en modifiant la classe du bouton avec `v-bind:class="{ disabledButton: !inStock }"`
        - alternative à étudier... avec la déclaration `<button :class="[!inStock ? button : disabledButton]">`
+4. *Challenge :* (branche `L7-reliure-style-classe-challenge`)
+    - Le challenge est de lier la classe `.out-of-stock-img` à l'image chaque fois que `inStock` est __faux__
+    - Création d'une branche `L7-reliure-style-classe-challenge`
+    - Création du codage du challenge dans `index.html`
+
+### Etape 7 : Propriétés calculés (branche `L8-propriétés-calculées`)  __Computed Proprieties__
+1. Initialisation des données pour cette étape
+   - Création d'une branche `L8-propriétés-calculées`
+   - Suppression du codage du challenge et adaptation des données dans `index.html` et `main.js`
+2. Etablir un **titre** avec un calcul direct dans **Vue** qui combine les données `brand` et `product`
+   - Ajouter une propriété `computed` (calculée) qui se nomme `titre()`
+   - Afficher `{{ title }}` dans la balise `<h1>` de `.product-info`   
+3. Utiliser les propriétés calculées pour gérer les quantités par produit et avoir une connaissance dynamique de la disponibilité
+   - Ajouter à la donnée structurée `variants` un champ `quantity` pour chaque produit
+   - Créer une propriété calculée pour afficher **En stock** ou **En rupture de stock** en fonction de la quantité de la couleur du 
+     produit choisie par le survol (`mouseover`) de la souris
+     - ajouter un `index` à la boucle `v-for` de rendu du `variants` avec __`v-for="(variant, index) in variants"`__ pour identifier l'indice 
+       du produit 
+     - modifier la directive `@mouseover` pour identifier le `variant` à mettre à jour avec __` @mouseover="updateVariant(index)"`__
+     - ajouter une donnée `selectedVariant` pour mémoriser l'indice du *produit survolé* 
+     - modifier la méthode `updateVariant()` pour gérer l'indice du *produit survolé*
+     - remplacer (supprimer) la donnée `image` par une propriété calculée (`computed`) pour gérer l'image avec `image()` qui utilise le champ 
+       `image` de la donnée structurée `variant`
+     - remplacer (supprimer) la donnée `inStock` par une propriété calculée (`computed`) pour gérer la quantité `inStock()` qui utilise le champ 
+       `quantity` de la donnée structurée `variant`
