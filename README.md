@@ -89,3 +89,10 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
 3. Changer l'image affichée lors que la souris survole les __textes de la couleur__
    - Créer dans `index.html` l'écoute `v-on` (ou **@**) de l'événement `mouseover` (survol) du __texte de la couleur__ en déclenchant la 
      méthode `updateImage()`
+4. *Challenge :* (branche `L6-gestion-événements-challenge`)
+    - Le challenge est de créer un bouton pour décrémenter la valeur du __panier__ `Cart(...)` affiché
+    - Création d'une branche `L6-gestion-événements-challenge`
+    - Création du codage du challenge dans `main.js` et dans `index.html`
+      - le bouton s'affiche si le nombre `cart` est supérieur à __0__ avec la directive `v-if="cart > 0"`
+      - le bouton gère un événement `@click` qui active la méthode `removeFromCart()` avec la directive `v-on:click="removeFromCart()"` 
+        (en version raccourcie : `@click="removeFromCart()"`)

@@ -18,6 +18,11 @@ const app = Vue.createApp({
         },
         updateImage (myVariantImage) {
             this.image = myVariantImage
+        },
+        // Challenge
+        removeFromCart () {
+            this.cart -= 1
         }
+        // Challenge
     }
 })
