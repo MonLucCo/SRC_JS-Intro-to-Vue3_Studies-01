@@ -12,4 +12,12 @@ const app = Vue.createApp({
            ],
         }
     },
+    methods: {
+        addToCart () {
+            this.cart += 1
+        },
+        updateImage (myVariantImage) {
+            this.image = myVariantImage
+        }
+    }
 })

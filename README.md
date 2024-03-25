@@ -83,3 +83,9 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
        comprenant `id`, `color` et `image`
      - Création d'un élément `.cart` (pour compter la quantité du __panier__) et d'un bouton `.button` (pour ajouter 
        au __panier__)
+2. Incrémenter la valeur de la donnée `cart` avec un click sur le bouton `.button`
+   - Créer l'écoute de événement `click` du bouton `.button` avec la directive `v-on` (raccourci est **@**)
+   - Créer la méthode appelée pour traiter l'événement `addToCart()` dans `main.js`
+3. Changer l'image affichée lors que la souris survole les __textes de la couleur__
+   - Créer dans `index.html` l'écoute `v-on` (ou **@**) de l'événement `mouseover` (survol) du __texte de la couleur__ en déclenchant la 
+     méthode `updateImage()`
