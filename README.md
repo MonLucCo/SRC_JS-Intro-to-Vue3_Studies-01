@@ -143,3 +143,8 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
       **`brand` + ' ' + `product` + ' est en vente'** chaque fois que `onSale` est __vrai__
     - Création d'une branche `L8-propriétés-calculées-challenge`
     - Création du codage du challenge dans `main.js` et dans `index.html`
+
+### Etape 8 : Composants et Accessoires (branche `L9-composants-accessoires`)  __Components & Props__
+1. Initialisation des données pour cette étape
+   - Création d'une branche `L9-composants-accessoires`
+   - Suppression du codage du challenge et adaptation des données dans `index.html` et `main.js`
