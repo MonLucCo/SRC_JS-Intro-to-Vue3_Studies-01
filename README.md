@@ -138,3 +138,8 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
        `image` de la donnée structurée `variant`
      - remplacer (supprimer) la donnée `inStock` par une propriété calculée (`computed`) pour gérer la quantité `inStock()` qui utilise le champ 
        `quantity` de la donnée structurée `variant`
+4. *Challenge :* (branche `L8-propriétés-calculées-challenge`)
+    - Le challenge est de créer une donnée booléenne `onSale` et d'afficher avec une *propriété calculée* le message 
+      **`brand` + ' ' + `product` + ' est en vente'** chaque fois que `onSale` est __vrai__
+    - Création d'une branche `L8-propriétés-calculées-challenge`
+    - Création du codage du challenge dans `main.js` et dans `index.html`
