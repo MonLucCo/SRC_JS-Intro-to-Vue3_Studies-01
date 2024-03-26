@@ -188,8 +188,12 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
 3. Modification du panier `cart` pour contenir les identifiants de chaque produit ajouté et afficher le nombre de produits sélectionnés dans le _panier_
    - dans `main.js` :
      - transformer la donnée `cart` en tableau
-     - modifier la méthode `update()` pour ajouter l'identifiant du produit ajouté au _panier_
+     - modifier la méthode `updateCart()` pour ajouter l'identifiant du produit ajouté au _panier_
    - dans le composant `product-display` (défini dans le fichier `ProductDisplay.js`) :
      - ajouter un second paramètre à la méthode `addToCart()` pour transmettre l'identificant du produit concerné
    - dans le projet `index.html` :
      - modifier l'affichage du _panier_ pour indiquer le nombre d'éléments sélectionnés
+4. *Challenge :* (branche `L10-communiquer-événements-challenge`)
+    - Le challenge est de créer dans le composant `product-display` qui supprime le produit du _panier_
+    - Création d'une branche `L10-communiquer-événements-challenge`
+    - Création du codage du challenge dans le dossier `components` et dans `index.html`
