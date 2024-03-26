@@ -13,9 +13,7 @@
       <div class="nav-bar"></div>
 
       <div class="cart">Cart({{ cart}})</div>   <!-- Quantité au panier -->
-      <product-display></product-display>
-      <product-display></product-display>
-      <product-display></product-display>
+      <product-display :premium="premium"></product-display>  <!-- lien dynamique de l'accessoire ':premium=' avec la donnée "premium" -->
     </div>
 
     <!-- Import App -->

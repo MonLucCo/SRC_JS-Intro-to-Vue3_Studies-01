@@ -148,12 +148,23 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
 1. Initialisation des données pour cette étape
    - Création d'une branche `L9-composants-accessoires`
    - Suppression du codage du challenge et adaptation des données dans `index.html` et `main.js`
-2. Création d'un premier composant et insertion dans le projet
+2. Création d'un _premier_ **composant** et insertion dans le projet
    - Création de la structure d'un composant **Vue**
      - création du dossier `./components` et d'un fichier `ProductDisplay.js`
-     - dans le fichier `ProductDisplay.js`, créer le composant __`product-display`__ en transférant de :
+     - dans le fichier `ProductDisplay.js`, créer le composant __`product-display`__ en créant des **options** obtenues en transférant de :
        - de `index.html`, l'élément `.product-display`
-       - de `main.js`, les éléments de `data()` (sauf la donnée `cart` qui est _globale_) et les élément de `methods` et `computed`
+       - de `main.js`, les éléments de `data()` (sauf la donnée `cart` qui est _globale_) et les éléments de `methods` et `computed`
    - Insertion du composant dans le projet
      - dans `index.html`, importer le _script_ (après l'import de `main.js`)
    - Utilisation du composant en appelant la balise de son nom (ici, `<product-display>`)
+3. Création d'un _premier_ **accessoire** d'un __composant__ pour atteindre des éléments extérieurs à **ce** __composant__
+   - Pour l'exemple, création d'un attribut personnalisé au composant `product-display` pour indiquer la gestion d'un client __premium__
+     - dans `main.js` création de la donnée booléenne `premium`
+     - dans le composant `ProductDisplay.js` :
+       - ajouter l'option `props:` (accessoire) pour gérer les relations __avec l'extérieur du composant__
+       - ajouter à **methods:** la propriété calculée `shipping () { ... }` pour calculer le prix du transport
+       - ajouter au **template:** l'élément `<p>` pour indiquer le prix du transport en utilisant la **propriété calculée** `shipping()`
+     - dans le projet `index.html` :
+       - dans l'élément _composant_ `<product-display>` ajouter l'attribut **`premium="premium"`** qui permet d'accéder 
+         à l'accessoire _'premium='_ et lui affecter la valeur de la donnée _"premium"_ (l'attribut `premium` utilise la directive `v-bind` pour établir 
+         un lien dynamique avec la donnée `{ premium }`)
