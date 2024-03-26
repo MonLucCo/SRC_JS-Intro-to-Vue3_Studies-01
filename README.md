@@ -172,3 +172,8 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
     - Le challenge est de créer un composant `product-details` qui reçoit le `details` à partir d'un *accessoire* appelé `details`
     - Création d'une branche `L9-composants-accessoires-challenge`
     - Création du codage du challenge dans le dossier `components` et dans `index.html`
+
+### Etape 9 : Communiquer les événements (branche `L10-communiquer-événements`)  __Communicating Events__
+1. Initialisation des données pour cette étape
+   - Création d'une branche `L10-communiquer-événements`
+   - Suppression du codage du challenge et adaptation des données dans `index.html` et `main.js`
