@@ -177,3 +177,19 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
 1. Initialisation des données pour cette étape
    - Création d'une branche `L10-communiquer-événements`
    - Suppression du codage du challenge et adaptation des données dans `index.html` et `main.js`
+2. Création d'un événement `add-to-cart` du composant `product-display` pour ajouter au _panier_ `cart` (donnée définie dans `main.js`) du _projet_
+   - dans `main.js` :
+     - créer une méthode `updateCart()` pour modifier la donnée `cart`
+   - dans le projet `index.html` :
+     - ajouter à l'instance du composant `<product-display>` l'attribut `@add-to-cart="updateCart"` pour la gestion dynamique `v-on` (**@**) par la 
+       méthode `updateCart()` de l'événement `add-to-cart`
+   - dans le composant `product-display` (défini dans le fichier `ProductDisplay.js`) :
+     - modifier la méthode `addToCart()` pour émettre _l'événement_ nommé `add-to-cart` par la commande `$emit( ... )`
+3. Modification du panier `cart` pour contenir les identifiants de chaque produit ajouté et afficher le nombre de produits sélectionnés dans le _panier_
+   - dans `main.js` :
+     - transformer la donnée `cart` en tableau
+     - modifier la méthode `update()` pour ajouter l'identifiant du produit ajouté au _panier_
+   - dans le composant `product-display` (défini dans le fichier `ProductDisplay.js`) :
+     - ajouter un second paramètre à la méthode `addToCart()` pour transmettre l'identificant du produit concerné
+   - dans le projet `index.html` :
+     - modifier l'affichage du _panier_ pour indiquer le nombre d'éléments sélectionnés
