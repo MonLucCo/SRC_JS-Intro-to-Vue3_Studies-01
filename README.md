@@ -176,7 +176,7 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
 ### Etape 9 : Communiquer les événements (branche `L10-communiquer-événements`)  __Communicating Events__
 1. Initialisation des données pour cette étape
    - Création d'une branche `L10-communiquer-événements`
-   - Suppression du codage du challenge et adaptation des données dans `index.html` et `main.js`
+   - Suppression du codage du challenge et adaptation des données dans `product-display`, `index.html` et `main.js`
 2. Création d'un événement `add-to-cart` du composant `product-display` pour ajouter au _panier_ `cart` (donnée définie dans `main.js`) du _projet_
    - dans `main.js` :
      - créer une méthode `updateCart()` pour modifier la donnée `cart`
@@ -197,3 +197,8 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
     - Le challenge est de créer dans le composant `product-display` qui supprime le produit du _panier_
     - Création d'une branche `L10-communiquer-événements-challenge`
     - Création du codage du challenge dans le dossier `components` et dans `index.html`
+
+### Etape 10 : Formulaires et v-modèle (branche `L11-forms`)  __Forms & v-model__
+1. Initialisation des données pour cette étape
+   - Création d'une branche `L11-forms`
+   - Suppression du codage du challenge et adaptation des données dans `product-display`, `index.html` et `main.js`
