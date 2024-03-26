@@ -202,3 +202,19 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
 1. Initialisation des données pour cette étape
    - Création d'une branche `L11-forms`
    - Suppression du codage du challenge et adaptation des données dans `product-display`, `index.html` et `main.js`
+2. Créer un formulaire permettant d'ajouter des avis sur les produits
+   - Créer un fichier `ReviewForm.js` et définir le composant `review-form` qui propose le **template** du formulaire
+     - chaque structure du formulaire possède un identifiant (`#name`, `#review`, `#rating`) associé à une donnée du composant (`name`, `review`, 
+       `rating`) pour que les données saisies dans le formulaire soient stockées _localement_ dans le composant
+     - chaque donnée du composant (`name`, `review`, `rating`) possède une _liaison d'attribut_ (`v-model`) pour chacun des éléments du formulaire 
+       (`v-model="name"`, `v-model="review"`,`v-model.number="rating"`)
+       - pour le sélecteur `#rating`, la liaison s'effectue sur la _valeur_ du sélecteur `v-model.number`
+     - ajouter à la définition du formulaire `.review-form` un modificateur `@submit.prevent="onSubmit"` pour empêcher le comportement par défaut 
+       de l'événement de _soumission_
+   - Créer la **méthode** `onSubmit` pour traiter la _soumission_ du formulaire
+     - créer un objet structuré `productReview` qui contient les données du formulaire, puis qui émet un événement nommé `review-submitted` avec le 
+       contenu à soumettre `productReview`, puis qui réinitialise les données (`name`, `review`, `rating`) du formulaire
+   - Utiliser le composant ``review-form` pour l'afficher :
+     - avec un script d'import dans le _projet_ (`index.html`)
+     - avec une utilisation du composant `review-form` par un ajout de la balise `<review-form>` dans le _template_ du composant parent 
+       `product-display`

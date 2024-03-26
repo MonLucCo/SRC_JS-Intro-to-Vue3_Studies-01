@@ -40,6 +40,7 @@ app.component('product-display', {
                         Add to Cart
                     </button>
                 </div>
+                <review-form></review-form>
             </div>
     </div>`,
     data() {
