@@ -56,7 +56,7 @@ app.component('product-display', {
     },
     methods: {
         addToCart () {
-            this.$emit('add-to-cart')   // émission d'un événement nommé 'add-to-cart'
+            this.$emit('add-to-cart', this.variants[this.selectedVariant].id)   // émission d'un événement nommé 'add-to-cart' et l'identifiant du produit
         },
         updateImage (myIndexfSelectedVariant) {
             this.selectedVariant = myIndexfSelectedVariant
