@@ -14,14 +14,15 @@ app.component('product-display', {
                 </div>
                 <div class="product-info">
                     <h1>{{ title }}</h1>
+
                     <p v-if="inStock">In Stock</p>
                     <p v-else>Out of Stock</p>
 
-                    <p>Shipping: {{ shipping }}</p>   <!-- indication du prix du transport -->
+                    <p>Shipping: {{ shipping }}</p>
 
-                    <!-- Challenge -->
-                    <product-details :details="details"></product-details>
-                    <!-- Challenge -->
+                    <ul>
+                        <li v-for="detail in details">{{ detail }}</li>
+                    </ul>
                     
                     <div
                         class="color-circle"
@@ -30,6 +31,7 @@ app.component('product-display', {
                         @mouseover="updateImage(index)"
                         :style="{ backgroundColor: variant.color }">
                     </div>
+                    
                     <button
                         class="button"
                         :class="{ disabledButton: !inStock }"
