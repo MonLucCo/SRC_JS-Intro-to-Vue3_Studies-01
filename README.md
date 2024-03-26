@@ -168,3 +168,7 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
        - dans l'élément _composant_ `<product-display>` ajouter l'attribut **`premium="premium"`** qui permet d'accéder 
          à l'accessoire _'premium='_ et lui affecter la valeur de la donnée _"premium"_ (l'attribut `premium` utilise la directive `v-bind` pour établir 
          un lien dynamique avec la donnée `{ premium }`)
+4. *Challenge :* (branche `L9-composants-accessoires-challenge`)
+    - Le challenge est de créer un composant `product-details` qui reçoit le `details` à partir d'un *accessoire* appelé `details`
+    - Création d'une branche `L9-composants-accessoires-challenge`
+    - Création du codage du challenge dans le dossier `components` et dans `index.html`

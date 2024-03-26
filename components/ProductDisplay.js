@@ -19,9 +19,10 @@ app.component('product-display', {
 
                     <p>Shipping: {{ shipping }}</p>   <!-- indication du prix du transport -->
 
-                    <ul>
-                        <li v-for="detail in details">{{ detail }}</li>
-                    </ul>
+                    <!-- Challenge -->
+                    <product-details :details="details"></product-details>
+                    <!-- Challenge -->
+                    
                     <div
                         class="color-circle"
                         v-for="(variant, index) in variants"
@@ -50,31 +51,31 @@ app.component('product-display', {
                 { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg', quantity: 3 }, 
             ],
         }
+    },
+    methods: {
+        addToCart () {
+            this.cart += 1
         },
-        methods: {
-            addToCart () {
-                this.cart += 1
-            },
-            updateImage (myIndexfSelectedVariant) {
-                this.selectedVariant = myIndexfSelectedVariant
-            },
+        updateImage (myIndexfSelectedVariant) {
+            this.selectedVariant = myIndexfSelectedVariant
         },
-        computed: {
-            title () {
-                return this.brand + ' ' + this.product
-            },
-            image () {
-                return this.variants[this.selectedVariant].image
-            },
-            inStock () {
-                return this.variants[this.selectedVariant].quantity
-            },
-            shipping () {
-                if (this.premium) {
-                    return 'Free'
-                }
-                return '2.99 $'
+    },
+    computed: {
+        title () {
+            return this.brand + ' ' + this.product
+        },
+        image () {
+            return this.variants[this.selectedVariant].image
+        },
+        inStock () {
+            return this.variants[this.selectedVariant].quantity
+        },
+        shipping () {
+            if (this.premium) {
+                return 'Free'
             }
+            return '2.99 $'
         }
+    }
 
 })
