@@ -236,3 +236,8 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
    - s'assurer avant la soumission que tous les champs du formulaire sont remplis, sinon afficher un **message d'alerte**
      - dans la méthode `onSubmit` du composant `review-form`, tester si tous les champs sont remplis avant de réaliser le traitement de soumission
        - informer par un message d'alerte, si au moins un champ du formulaire n'est pas rempli
+4. *Challenge :* (branche `L11-forms-challenge`)
+    - Le challenge est d'ajouter une question dans le composant `review-form`, puis de l'enregistrer et de l'afficher dans le composant `review-list`
+    - Création d'une branche `L11-forms-challenge`
+    - Création du codage du challenge dans le dossier `components` (fichiers `ReviewForm.js` et `ReviewList`)
+      - **à remarquer : l'ajout d'une fonctionnalité dans les couches _basses_, sans modifier les couches _hautes_ du _projet_**

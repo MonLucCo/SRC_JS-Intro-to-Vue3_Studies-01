@@ -18,6 +18,14 @@ app.component('review-form', {
             <option>1</option>
         </select>
 
+        <!-- Challenge -->
+        <label for="recommend">Would you recommend this product?</label>
+        <select id="recommend" v-model="recommend">
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+        <!-- Challenge -->
+
         <input class="button" type="submit" value="Submit">  
 
     </form>`,
@@ -25,25 +33,34 @@ app.component('review-form', {
         return {
             name: '',
             review: '',
-            rating: null
+            rating: null,
+            // Challenge
+            recommend: null
+            // Challenge
         }
     },
     methods: {
         onSubmit () {
-            if (!this.name || !this.review || !this.rating) {
+            if (!this.name || !this.review || !this.rating || !this.recommend) {                // Challenge
                 alert ('Review is incomplete. Please fill out every field')
                 return          // arrêt de la soumission => saisie incomplète des champs 
             }
             let productReview = {
                 name: this.name,
                 review: this.review,
-                rating: this.rating
+                rating: this.rating,
+                // Challenge
+                recommend: this.recommend
+                // Challenge
             }
             this.$emit('review-submitted', productReview)
 
             this.name = ''
             this.review = ''
             this.rating = null
+            // Challenge
+            this.recommend = null
+            // Challenge
         }
     }
 })
