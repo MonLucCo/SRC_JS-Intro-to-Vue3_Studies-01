@@ -176,7 +176,7 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
 ### Etape 9 : Communiquer les événements (branche `L10-communiquer-événements`)  __Communicating Events__
 1. Initialisation des données pour cette étape
    - Création d'une branche `L10-communiquer-événements`
-   - Suppression du codage du challenge et adaptation des données dans `index.html` et `main.js`
+   - Suppression du codage du challenge et adaptation des données dans `product-display`, `index.html` et `main.js`
 2. Création d'un événement `add-to-cart` du composant `product-display` pour ajouter au _panier_ `cart` (donnée définie dans `main.js`) du _projet_
    - dans `main.js` :
      - créer une méthode `updateCart()` pour modifier la donnée `cart`
@@ -197,3 +197,42 @@ proposées dans le cours __Intro à Vue 3__ de **Mastery.com**.
     - Le challenge est de créer dans le composant `product-display` qui supprime le produit du _panier_
     - Création d'une branche `L10-communiquer-événements-challenge`
     - Création du codage du challenge dans le dossier `components` et dans `index.html`
+
+### Etape 10 : Formulaires et v-modèle (branche `L11-forms`)  __Forms & v-model__
+1. Initialisation des données pour cette étape
+   - Création d'une branche `L11-forms`
+   - Suppression du codage du challenge et adaptation des données dans `product-display`, `index.html` et `main.js`
+2. Créer un formulaire permettant d'ajouter des avis sur les produits
+   - Créer un fichier `ReviewForm.js` et définir le composant `review-form` qui propose le **template** du formulaire
+     - chaque structure du formulaire possède un identifiant (`#name`, `#review`, `#rating`) associé à une donnée du composant (`name`, `review`, 
+       `rating`) pour que les données saisies dans le formulaire soient stockées _localement_ dans le composant
+     - chaque donnée du composant (`name`, `review`, `rating`) possède une _liaison d'attribut_ (`v-model`) pour chacun des éléments du formulaire 
+       (`v-model="name"`, `v-model="review"`,`v-model.number="rating"`)
+       - pour le sélecteur `#rating`, la liaison s'effectue sur la _valeur_ du sélecteur `v-model.number`
+     - ajouter à la définition du formulaire `.review-form` un modificateur `@submit.prevent="onSubmit"` pour empêcher le comportement par défaut 
+       de l'événement de _soumission_
+   - Créer la **méthode** `onSubmit` pour traiter la _soumission_ du formulaire
+     - créer un objet structuré `productReview` qui contient les données du formulaire, puis qui émet un événement nommé `review-submitted` avec le 
+       contenu à soumettre `productReview`, puis qui réinitialise les données (`name`, `review`, `rating`) du formulaire
+   - Utiliser le composant ``review-form` pour l'afficher :
+     - avec un script d'import dans le _projet_ (`index.html`)
+     - avec une utilisation du composant `review-form` par un ajout de la balise `<review-form>` dans le _template_ du composant parent 
+       `product-display`
+3. Exploitation du formulaire `review-form`
+   - Ecouter et exploiter l'événement `review-submitted` pour le stocker dans une nouvelle donnée `reviews` du composant `product-display`
+     - dans le composant `product-display` :
+       - créer la donnée tableau nommée `reviews`
+       - pour l'instance du formulaire `review-form` ajouter une liaison à la méthode `addReview` pour l'événement nommé `review-submitted`
+       - créer la méthode `addReview` avec le contenu du formulaire transmis avec l'événement pour enregistrer le contenu des données du formulaire 
+         dans le tableau `reviews`
+   - Créer un nouveau composant `review-list` (dans un nouveau fichier `ReviewList`) pour afficher les avis
+     - dans le composant `review-list` :
+       - créer l'accessoire `reviews` pour disposer des données à afficher
+       - crér le `template` pour afficher les avis
+     - dans le _template_ du composant `product-display`, ajouter l'instance du composant `review-list` avec la liaison `:reviews="reviews"` aux 
+       données `reviews`
+       - avec l'affichage du composant `review-list` si il existe un avis enregistré `v-if="reviews.length"`
+     - dans le _projet_ (fichier `index.html`) importer le composant `review-list` du fichier `ReviewList.js`
+   - s'assurer avant la soumission que tous les champs du formulaire sont remplis, sinon afficher un **message d'alerte**
+     - dans la méthode `onSubmit` du composant `review-form`, tester si tous les champs sont remplis avant de réaliser le traitement de soumission
+       - informer par un message d'alerte, si au moins un champ du formulaire n'est pas rempli
