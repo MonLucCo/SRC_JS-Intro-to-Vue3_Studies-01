@@ -13,7 +13,11 @@
       <div class="nav-bar"></div>
 
       <div class="cart">Cart({{ cart.length }})</div>   <!-- Quantité au panier -->
-      <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
+      <product-display 
+        :premium="premium" 
+        @add-to-cart="updateCart"
+        @remove-from-cart="removeCart">   <!-- Challenge -->
+      </product-display>
     </div>
 
     <!-- Import App -->

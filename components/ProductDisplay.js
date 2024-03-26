@@ -39,6 +39,16 @@ app.component('product-display', {
                         @click="addToCart">
                         Add to Cart
                     </button>
+
+                    <!-- Challenge -->
+                    <button
+                        class="button"
+                        :class="{ disabledButton: !inStock }"
+                        :disabled="!inStock"
+                        @click="removeFromCart">
+                        Remove from Cart
+                    </button>
+                    <!-- Challenge -->
                 </div>
             </div>
     </div>`,
@@ -58,6 +68,11 @@ app.component('product-display', {
         addToCart () {
             this.$emit('add-to-cart', this.variants[this.selectedVariant].id)   // émission d'un événement nommé 'add-to-cart' et l'identifiant du produit
         },
+        // Challenge
+        removeFromCart () {
+            this.$emit('remove-from-cart', this.variants[this.selectedVariant].id)
+        },
+        // Challenge
         updateImage (myIndexfSelectedVariant) {
             this.selectedVariant = myIndexfSelectedVariant
         },
