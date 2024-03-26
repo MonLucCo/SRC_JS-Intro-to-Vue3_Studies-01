@@ -31,7 +31,7 @@ app.component('product-display', {
                         @mouseover="updateImage(index)"
                         :style="{ backgroundColor: variant.color }">
                     </div>
-                    
+
                     <button
                         class="button"
                         :class="{ disabledButton: !inStock }"
@@ -56,7 +56,7 @@ app.component('product-display', {
     },
     methods: {
         addToCart () {
-            this.cart += 1
+            this.$emit('add-to-cart')   // émission d'un événement nommé 'add-to-cart'
         },
         updateImage (myIndexfSelectedVariant) {
             this.selectedVariant = myIndexfSelectedVariant
